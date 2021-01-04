@@ -94,7 +94,7 @@ async def on_message(message):
     elif message.content == '!NEXT':
         authorized = False
         for role in message.author.roles:
-            if role.name == "@TA":
+            if role.name == TA_ROLE:
                 authorized = True
 
         if not authorized:
@@ -119,7 +119,7 @@ async def on_message(message):
     elif message.content == '!CLEARCHAT':
         authorized = False
         for role in message.author.roles:
-            if role.name == "@TA":
+            if role.name == TA_ROLE:
                 authorized = True
 
         if not authorized:
@@ -132,7 +132,7 @@ async def on_message(message):
     elif message.content == '!CLEARQUEUE':
         authorized = False
         for role in message.author.roles:
-            if role.name == "@TA":
+            if role.name == TA_ROLE:
                 authorized = True
 
         if not authorized:
