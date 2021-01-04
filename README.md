@@ -19,7 +19,6 @@ Everyone can use:
 
  Teachers assistants can slao use:
  * !NEXT    -    I'm done helping a student and can start helping the next one. (removes the next student from the queue).
- Do this before each Teachers assistants class:
  * !CLEARCHAT    -    Removes all messages in the chat.
  * !CLEARQUEUE    -    Removes all students in the queue.
 
