@@ -6,3 +6,5 @@ The Discord Bot needs Python 3.7 to work. At the time I wrote this bot, the Disc
 
 Use the requirements.txt file to install the required packages:
 pip install -r requirements.txt
+
+To use this bot, add the Token, Guild name, and TA usernames (example in code).
