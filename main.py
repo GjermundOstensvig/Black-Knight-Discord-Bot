@@ -92,8 +92,12 @@ async def on_message(message):
             await message.channel.send(response)
 
     elif message.content == '!NEXT':
-        # TODO: Have the bot check the list of TAs in the server instead of hard coding each incividual.
-        if not str(message.author) in ta_teacher_list:
+        authorized = False
+        for role in message.author.roles:
+            if role.name == "@TA":
+                authorized = True
+
+        if not authorized:
             response = f'Nice try {message.author}, but you lack the authority to do that!💢'
             await message.channel.send(response)
         elif not len(help_queue) > 0:
@@ -113,9 +117,12 @@ async def on_message(message):
             await message.channel.send(response)
 
     elif message.content == '!CLEARCHAT':
-        # Authorize
-        # TODO: Have the bot check the list of TAs in the server instead of hard coding each incividual.
-        if not str(message.author) in ta_teacher_list:
+        authorized = False
+        for role in message.author.roles:
+            if role.name == "@TA":
+                authorized = True
+
+        if not authorized:
             response = f'Nice try {message.author}, but you lack the authority to do that!'
             await message.channel.send(response)
         else:
@@ -123,9 +130,12 @@ async def on_message(message):
             await message.channel.purge(limit=100)
 
     elif message.content == '!CLEARQUEUE':
-        # Authorize
-        # TODO: Have the bot check the list of TAs in the server instead of hard coding each incividual.
-        if not str(message.author) in ta_teacher_list:
+        authorized = False
+        for role in message.author.roles:
+            if role.name == "@TA":
+                authorized = True
+
+        if not authorized:
             response = f'Nice try {message.author}, but you lack the authority to do that!'
             await message.channel.send(response)
         else:
