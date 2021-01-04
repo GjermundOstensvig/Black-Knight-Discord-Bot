@@ -24,4 +24,4 @@ Everyone can use:
 
 The program reads and writes to the csv file help_queue.csv so that the data is not lost if the bot crashes.
 
-The Discord bot no longer needs hardcoded TA usernames, they just need t have the Role "@TA"
+The Discord bot no longer needs hardcoded TA usernames. The teachers assistants just need to have the Role "@TA".
